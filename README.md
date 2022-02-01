@@ -17,6 +17,13 @@
 
 `python manage.py runserver`
 
+## Swagger UI Documentation
+
+http://127.0.0.1:8000/doc/
+
+http://127.0.0.1:8000/redoc/
+
+
 ## Endpoints
 
 GET all contacts : `http://127.0.0.1:8000/contacts/`
