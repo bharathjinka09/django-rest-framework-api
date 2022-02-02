@@ -13,3 +13,7 @@ class ContactView(viewsets.ModelViewSet):
     @action(detail=False, methods=['get'])
     def lol(self, request, pk=None):
         return Response({'status': 'OK'})
+
+
+def trigger_error(request):
+    division_by_zero = 1 / 0

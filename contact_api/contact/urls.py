@@ -6,5 +6,8 @@ router = routers.DefaultRouter()
 router.register('contacts', views.ContactView)
 
 urlpatterns = [
-    path('',include(router.urls))
+    path('',include(router.urls)),
+    path('sentry-debug/', views.trigger_error),
+    path('glitchtip-debug/', views.trigger_error),
+
 ]

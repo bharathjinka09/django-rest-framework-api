@@ -121,3 +121,30 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
+
+# sentry logging
+
+import sentry_sdk
+from sentry_sdk.integrations.django import DjangoIntegration
+
+sentry_sdk.init(
+    # dsn="https://32db728317024872aa5fd8bef30c7090@o1133015.ingest.sentry.io/6179156",
+    dsn="https://6ca67c0b6b93496aae2c30a916cf55e2@app.glitchtip.com/839",
+    integrations=[DjangoIntegration()],
+
+    # Set traces_sample_rate to 1.0 to capture 100%
+    # of transactions for performance monitoring.
+    # We recommend adjusting this value in production.
+    traces_sample_rate=1.0,
+
+    auto_session_tracking=False,
+
+    # If you wish to associate users to errors (assuming you are using
+    # django.contrib.auth) you may enable sending PII data.
+    send_default_pii=True,
+
+    release="1.0.0",
+    
+    environment="production",
+)

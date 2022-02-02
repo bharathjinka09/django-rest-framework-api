@@ -23,6 +23,9 @@ http://127.0.0.1:8000/doc/
 
 http://127.0.0.1:8000/redoc/
 
+## Glitchtip for error monitoring like sentry
+
+https://glitchtip.com/documentation/install
 
 ## Endpoints
 
